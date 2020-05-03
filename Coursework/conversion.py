@@ -39,11 +39,11 @@ def binary_conversion():
         second_binary.append(second_integer % 2)
         second_integer = second_integer // 2
 
-    """This will arrange the binary digits from right to left"""
+    # This will arrange the binary digits from right to left
     final_binary_first = first_binary[::-1]
     final_binary_second = second_binary[::-1]
 
-    """The below code is responsible to add extra bit to make exact 8 bit value"""
+    # The below code is responsible to add extra bit to make exact 8 bit value
     while len(final_binary_first) != 8:
         final_binary_first.insert(0, 0)
 
@@ -54,10 +54,8 @@ def binary_conversion():
     return final_binary_first, final_binary_second
 
 
-"""The below code is used to again convert result binary value to final decimal/integer value"""
-
-
 def decimal_conversion(binary_value):
+    """The below code is used to again convert result binary value to final decimal/integer value"""
     num = binary_value
     integer_value = 0
     base = 1

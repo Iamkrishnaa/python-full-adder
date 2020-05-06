@@ -17,6 +17,11 @@ def full_adder(first_binary, second_binary, carry_in):
 
 
 def binary_full_adder():
+    """
+    this is the function that will perform byte binary adder
+    This function will perform binary addition from provided
+    integer vales and again convert the sum to respective integer
+    """
     first_binary, second_binary = binary_conversion()
     carry_in = 0
     result = []
@@ -27,20 +32,10 @@ def binary_full_adder():
 
     result = int("".join(str(i) for i in result))
 
+    # the below two lines will remove join the number
     final_first_binary = ''.join(str(x) for x in first_binary)
     final_second_binary = ''.join(str(x) for x in second_binary)
 
-    if len(str(result)) >= 8:
-        print("Output value exceed the bit limit. Try other number")
-        binary_full_adder()
-    else:
-        print("Final answer is: \n")
-        print("Binary addition is: \n", final_first_binary, "+", final_second_binary, "=", result)
-        print("\nBinary to Decimal is:\n", final_first_binary, "+", final_second_binary, "=", decimal_conversion(result))
-
-
-while True:
-    binary_full_adder()
-    query = input("Enter q to quit program, Any other to continue.")
-    if query == "q" or query == "Q":
-        break
+    print("Final answer is: \n")
+    print("Binary addition is: \n", final_first_binary, "+", final_second_binary, "=", result)
+    print("\nBinary to Decimal is:\n", final_first_binary, "+", final_second_binary, "=", decimal_conversion(result))

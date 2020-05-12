@@ -9,7 +9,7 @@ def run():
     """
     while True:
         binary_full_adder()  # this calls binary_full_adder function from full_adder module
-        query = input("Enter q to quit program, Any other to continue.")
+        query = input("Enter q to quit program, Any other to continue.\n")
         if query == "q" or query == "Q":  # we can convert it to lowercase and apply too.
             break
 
